@@ -18,7 +18,10 @@ server <- function(input,output){
             labs(title = "Video Game Sales",
                  x = "Publish Year",
                  y = "Total Sales , in million") +
-            theme_minimal()
+            theme_minimal()+
+            theme(legend.position = "none",
+                  plot.title = element_text(face = "bold",hjust = 0.5),
+                  plot.subtitle = element_text(hjust = 0.5)) 
         
         ggplotly(plot3, tooltip = "text")
     })
@@ -40,7 +43,9 @@ server <- function(input,output){
             scale_fill_gradient(low = "aquamarine", high= "orange") +
             scale_x_continuous(labels = comma) +
             theme_minimal() +
-            theme(legend.position = "none") 
+            theme(legend.position = "none",
+                  plot.title = element_text(face = "bold",hjust = 0.5),
+                  plot.subtitle = element_text(hjust = 0.5)) 
         
         ggplotly(plot1, tooltip = "text")
     })
@@ -61,7 +66,9 @@ server <- function(input,output){
             scale_fill_gradient(low = "aquamarine", high= "orange") +
             scale_x_continuous(labels = comma) +
             theme_minimal() +
-            theme(legend.position = "none") 
+            theme(legend.position = "none",
+                  plot.title = element_text(face = "bold",hjust = 0.5),
+                  plot.subtitle = element_text(hjust = 0.5)) 
         
         ggplotly(plot2, tooltip = "text")
     })
@@ -81,7 +88,9 @@ server <- function(input,output){
             scale_fill_gradient(low = "aquamarine", high= "orange") +
             scale_x_continuous(labels = comma) +
             theme_minimal() +
-            theme(legend.position = "none") 
+            theme(legend.position = "none",
+                  plot.title = element_text(face = "bold",hjust = 0.5),
+                  plot.subtitle = element_text(hjust = 0.5))  
         
         ggplotly(plot2, tooltip = "text")
     })
